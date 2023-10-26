@@ -9,7 +9,7 @@ import SwiftUI
 import WebKit
 
 struct ContentView: View {
-    @State private var url = URL(string: "https://www.google.com")!
+    @State private var url = URL(string: "https://chat.openai.com")!
     @State private var progress: Float = 0.0
     @State private var webView = WKWebView()
     @State private var isLoading = true
@@ -18,7 +18,19 @@ struct ContentView: View {
     var body: some View {
         WebView(url: url, webView: $webView, progress: $progress)
             .toolbar {
-                ToolbarItemGroup {
+                ToolbarItemGroup(placement: .navigation) {
+                    Button {
+                        webView.reload()
+                    } label: {
+                        Image(systemName: "chevron.left")
+                    }
+                    .disabled(!webView.canGoBack)
+                    
+                    Text("\(url.host ?? "unknown site")")
+                        .bold()
+                }
+                
+                ToolbarItemGroup(placement: .automatic) {
                     if isLoading {
                         ProgressView()
                             .scaleEffect(0.5)
@@ -46,8 +58,7 @@ struct ContentView: View {
                     .keyboardShortcut("r", modifiers: .command)
                 }
             }
-            .navigationTitle(url.host ?? "unknown site")
-            .ignoresSafeArea(.container, edges: .top)
+            .navigationTitle("")
             .onAppear {
                 webView.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"
             }
