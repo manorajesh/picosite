@@ -14,6 +14,8 @@
 		3F276FFA2AE99B50009DA77B /* picositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F276FF92AE99B50009DA77B /* picositeTests.swift */; };
 		3F2770042AE99B50009DA77B /* picositeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2770032AE99B50009DA77B /* picositeUITests.swift */; };
 		3F2770062AE99B50009DA77B /* picositeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2770052AE99B50009DA77B /* picositeUITestsLaunchTests.swift */; };
+		3F2770132AE99BF7009DA77B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2770122AE99BF7009DA77B /* WebView.swift */; };
+		3FC7CA9D2AEAEB8300B890B2 /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7CA9C2AEAEB8300B890B2 /* Tooltip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		3F276FFF2AE99B50009DA77B /* picositeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = picositeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2770032AE99B50009DA77B /* picositeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = picositeUITests.swift; sourceTree = "<group>"; };
 		3F2770052AE99B50009DA77B /* picositeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = picositeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F2770122AE99BF7009DA77B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		3FC7CA9C2AEAEB8300B890B2 /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +101,11 @@
 			children = (
 				3F276FE72AE99B4D009DA77B /* picositeApp.swift */,
 				3F276FE92AE99B4D009DA77B /* ContentView.swift */,
+				3FC7CA9C2AEAEB8300B890B2 /* Tooltip.swift */,
 				3F276FEB2AE99B50009DA77B /* Assets.xcassets */,
 				3F276FF02AE99B50009DA77B /* picosite.entitlements */,
 				3F276FED2AE99B50009DA77B /* Preview Content */,
+				3F2770122AE99BF7009DA77B /* WebView.swift */,
 			);
 			path = picosite;
 			sourceTree = "<group>";
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2770132AE99BF7009DA77B /* WebView.swift in Sources */,
 				3F276FEA2AE99B4D009DA77B /* ContentView.swift in Sources */,
 				3F276FE82AE99B4D009DA77B /* picositeApp.swift in Sources */,
+				3FC7CA9D2AEAEB8300B890B2 /* Tooltip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
