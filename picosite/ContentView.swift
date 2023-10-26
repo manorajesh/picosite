@@ -26,17 +26,16 @@ struct ContentView: View {
                         switch url.scheme {
                         case "https":
                             Button {
-                                
+                                showAlert = true
                             } label: {
                                 Image(systemName: "lock.fill")
                             }
                         default:
                             Button {
-                                
+                                showAlert = true
                             } label: {
                                 Image(systemName: "lock.open.trianglebadge.exclamationmark.fill")
                             }
-                            .help("Webkit is using an unsecure connection to \(url.host ?? "unknown site")")
                         }
                     }
                     Button {
@@ -59,8 +58,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("hello"))
+            .alert(url.scheme == "https" ? "Webkit is using an encrypted connection to \(url.host ?? "unknown site")" : "Webkit is using an unsecure connection to \(url.host ?? "unknown site")", isPresented: $showAlert) {
             }
     }
 }
